@@ -1,5 +1,5 @@
-MAINTAINER Selenium <selenium-developers@googlegroups.com>
-
+MAINTAINER lv2program <lv2program@gmail.com>
+# used as a fork from the selenium docker images these are not my own works or IP.
 USER root
 
 #==============

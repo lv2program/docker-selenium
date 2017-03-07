@@ -20,6 +20,16 @@ Once the hub is up and running will want to launch nodes that can run tests. You
 $ docker run -d --link selenium-hub:hub selenium/node-phantomjs
 ```
 
+###How this is repo different? 
+
+To remote connect to a hub with multiple nodes you could setup multiple docker containers however you will be forced to use the default 4444 port. This image lets you define the port, the downside is... as of today I can't know how to make the running container self aware of what port is mapped over to the local webdriver.
+
+```
+$ docker run docker run -it -e HUB_ADDR=<hub-ip-address> -e HUB_PORT=4444 -e NODE_PORT=<node-port> -p <node-port>:5555 lv2program/node-phantomjs 
+
+```
+
+
 ## What is Selenium?
 _Selenium automates browsers._ That's it! What you do with that power is entirely up to you. Primarily, it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
 
